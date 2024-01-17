@@ -1,0 +1,329 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+<link rel="stylesheet" href="{% static '/main/assets/vendors/animate.css/animate.min.css' %}">
+
+
+{% block body %}
+    <header class="hiro-header home-header" id="top">
+        <nav>
+            <div class="container">
+                <div class="hiro-nav">
+                    <a href="{% url 'index' %}" class="nav-brand">
+                        <img src="{% static '/main/assets/images/logo.png' %}" height="30" width="88" alt="fix36" class="logo">
+                        <img src="{% static '/main/assets/images/logo-white.png' %}" height="40" width="98" alt="fix36" class="logo-white">
+                    </a>
+                    <button class="hiro-nav-popup-toggle">
+                        <svg width="20px" height="18px" viewBox="0 0 20 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g id="Hiro" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g id="hiro-agency" transform="translate(-964.000000, -37.000000)" fill="#FFFFFF">
+                                    <g id="Menu" transform="translate(964.000000, 37.000000)">
+                                        <g id="menu">
+                                            <rect id="Rectangle" fill-rule="nonzero" x="-8.05281767e-14" y="7.50795322" width="19.9609942" height="2.4951462"></rect>
+                                            <rect id="Rectangle" fill-rule="nonzero" x="-8.05281767e-14" y="14.9964327" width="19.9609942" height="2.4951462"></rect>
+                                            <rect id="Rectangle" fill-rule="nonzero" x="-8.05281767e-14" y="0.0194736842" width="19.9609942" height="2.4951462"></rect>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <div class="container wow fadeInUp">
+            <div id="hiroHeaderCarousel" class="hiro-header-carousel carousel slide" data-ride="carousel" data-interval="3500">
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h1 class="carousel-item-title" data-animation="animated fadeInRight" data-number="01"><span>Order any service to your doorstep</span></h1>
+                                <p class="carousel-item-description" data-animation="animated fadeInRight">Are you looking for top-notch services or eager to showcase your skills to a vast audience? Look no further! fix36 is your gateway to a dynamic community of talented service providers and enthusiastic customers right here in Nigeria.</p>
+                                <a href="#!" class="carousel-item-link link-hover-fx" data-animation="animated fadeInRight">READ MORE</a>
+                                <ul class="carousel-item-social-links nav" data-animation="animated fadeInRight">
+                                    <li>
+                                        <a href="{% url 'contact' %}" class="link-hover-fx">ORDER A SERVICE</a>
+                                    </li>
+                                    <li>
+                                        <a href="{% url 'contact' %}" class="link-hover-fx">LIST YOUR SERVICE</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <img src="{% static '/main/assets/images/carpen.png' %}" alt="Remarkable Digital Products" class="img-fluid w-100 rounded" width="372px">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h1 class="carousel-item-title" data-animation="animated fadeInRight" data-number="02"><span>Order remarkable digital services</span></h1>
+                                <p class="carousel-item-description" data-animation="animated fadeInRight">Are you looking for top-notch services or eager to showcase your skills to a vast audience? Look no further! fix36 is your gateway to a dynamic community of talented service providers and enthusiastic customers right here in Nigeria.</p>
+                                <a href="#!" class="carousel-item-link link-hover-fx" data-animation="animated fadeInRight">READ MORE</a>
+                                <ul class="carousel-item-social-links nav" data-animation="animated fadeInRight">
+                                    <li>
+                                        <a href="{% url 'contact' %}" class="link-hover-fx">ORDER A SERVICE</a>
+                                    </li>
+                                    <li>
+                                        <a href="{% url 'contact' %}" class="link-hover-fx">LIST YOUR SERVICE</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <img src="{% static '/main/assets/images/sol2.png' %}" alt="<span>Remarkable Digital Products</span>" class="img-fluid w-100 rounded" width="372px">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h1 class="carousel-item-title" data-animation="animated fadeInRight" data-number="03"><span>Discover a World of Home Solutions</span></h1>
+                                <p class="carousel-item-description" data-animation="animated fadeInRight">From routine maintenance to specialized projects, find the perfect home service providers at your fingertips. Whether you're looking for a trusted plumber, a skilled electrician, or a meticulous painter, fix36 has you covered.</p>
+                                <a href="#!" class="carousel-item-link link-hover-fx" data-animation="animated fadeInRight">READ MORE</a>
+                                <ul class="carousel-item-social-links nav" data-animation="animated fadeInRight">
+                                    <li>
+                                        <a href="{% url 'contact' %}" class="link-hover-fx">ORDER A SERVICE</a>
+                                    </li>
+                                    <li>
+                                        <a href="{% url 'contact' %}" class="link-hover-fx">LIST YOUR SERVICE</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <img src="{% static '/main/assets/images/avatar.jpg' %}" alt="Remarkable Digital Products" class="img-fluid w-100 rounded" width="372px">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <ol class="carousel-indicators">
+                    <li data-target="#hiroHeaderCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#hiroHeaderCarousel" data-slide-to="1"></li>
+                    <li data-target="#hiroHeaderCarousel" data-slide-to="2"></li>
+                </ol>
+            </div>
+        </div>
+    </header>
+    {% include 'main/partials/popup.html' %}
+
+    <section class="bg-primary hiro-section" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 d-flex flex-column justify-content-center wow fadeInUp">
+                    <h2 class="section-title mb-3">How It Works</h2>
+                    <p class="section-text-ct">Browse through a vast array of services offered by talented professionals across Nigeria.</p>
+                </div>
+                <div class="col-md-6 wow fadeInUp">
+                    <img src="{% static '/main/assets/images/img_3.png' %}" class="w-100 mb-5" alt="Digital Product Design">
+                    <p class="section-text-light">Experience top-notch services delivered by skilled professionals committed to exceeding your expectations.</p>
+                    <button class="hiro-btn-outline">VIEW MORE</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="hiro-section" id="services">
+        <div class="container">
+            <div class="service-section">
+                <h2 class="section-title career-section-title">Ready to Elevate Your Experience?</h2>
+                <div class="row">
+                    <div class="col-md-4 mb-4 mb-md-0 wow fadeInUp">
+                        <h6 class="service-category-title">Home Services</h6>
+                        <ul class="service-list list-group list-group-flush">
+                            <li class="list-group-item">Carpentry</li>
+                            <li class="list-group-item">Plumbing</li>
+                            <li class="list-group-item">Electrical services</li>
+                            <li class="list-group-item">Painting</li>
+                            <li class="list-group-item">Appliance repair</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 mb-4 mb-md-0 wow fadeInUp">
+                        <h6 class="service-category-title">Freelance and Creative Services</h6>
+                        <ul class="service-list list-group list-group-flush">
+                            <li class="list-group-item">UI & UX design</li>
+                            <li class="list-group-item">Graphic Design & identity</li>
+                            <li class="list-group-item">Video Production</li>
+                            <li class="list-group-item">Market Analysis</li>
+                            <li class="list-group-item">Deep Campaign Strategy</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 mb-4 mb-md-0 wow fadeInUp">
+                        <h6 class="service-category-title">Events and Entertainment</h6>
+                        <ul class="service-list list-group list-group-flush">
+                            <li class="list-group-item">Event planning</li>
+                            <li class="list-group-item">DJ services</li>
+                            <li class="list-group-item">Photography for events</li>
+                            <li class="list-group-item">Catering services</li>
+                            <li class="list-group-item">Magicians and entertainers</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="projects-section hiro-section" id="works">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6wow fadeInUp">
+                    <div class="project-card wow fadeInUp">
+                        <img src="{% static '/main/assets/images/Works4.png' %}" alt="Project" class="project-thumbnail">
+                        <h6 class="project-title">Motion designs</h6>
+                        <p class="Project-category"> Web designs / A Web Development Company </p>
+                    </div>
+                    <div class="project-card wow fadeInUp">
+                        <img src="{% static '/main/assets/images/Works2.png' %}" alt="Project" class="project-thumbnail">
+                        <h6 class="project-title">Expert studios</h6>
+                        <p class="Project-category"> Digital services / A Digital Branding Company  </p>
+                    </div>
+                </div>
+                <div class="col-md-6 project-column-indented">
+                    <div class="project-card wow fadeInUp">
+                        <img src="{% static '/main/assets/images/solar.jpg' %}" alt="Project" class="project-thumbnail">
+                        <h6 class="project-title">Dema Energies</h6>
+                        <p class="Project-category">Electrical services / A Solar Company </p>
+                    </div>
+                    <div class="project-card wow fadeInUp">
+                        <img src="{% static '/main/assets/images/furniture.jpg' %}" alt="Project" class="project-thumbnail">
+                        <h6 class="project-title">Yamaco Enterprises</h6>
+                        <p class="Project-category">Interior designs / A Furniture Company </p>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <a href="#!" class="load-more-link">VIEW ALL SERVICES</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="team-section hiro-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 wow fadeInUp">
+                    <h2 class="section-title">Meet <br> The Team</h2>
+                    <p class="section-text-light">At fix36, we are a passionate and dedicated team working together to bring you an unparalleled service experience. Get to know the faces behind the platform who are committed to connecting you with top-notch service providers and ensuring a seamless journey.</p>
+                    <div>
+                        <a class="carousel-control-prev" href="#hiroTeamCarousel" role="button" data-slide="prev">
+                            <img src="{% static '/main/assets/images/arrow_left.png' %}" alt="left arrow" width="20px">
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#hiroTeamCarousel" role="button" data-slide="next">
+                            <img src="{% static '/main/assets/images/Arrow_right.png' %}" alt="right arrow" width="20px">
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-7 wow fadeInRight">
+                    <div id="hiroTeamCarousel" class="hiro-team-carousel carousel slide" data-ride="carousel">
+                        <div class="carousel-inner" role="listbox">
+                            <div class="carousel-item active">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="team-card" data-animation="animated flipInY">
+                                            <img src="{% static '/main/assets/images/abdul.jpg' %}" alt="Paulina Gayoso" height="309" class="team-member-thumbnail">
+                                            <div class="team-member-details">
+                                                <h6 class="team-member-name">Abdulsamad Abdulkarim</h6>
+                                                <p class="team-member-title">Founder</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="team-card featured" data-animation="animated flipInY">
+                                            <img src="{% static '/main/assets/images/najib.png' %}" alt="Edwards" class="team-member-thumbnail">
+                                            <div class="team-member-details">
+                                                <h6 class="team-member-name">Najib Muhammad</h6>
+                                                <p class="team-member-title">Co-Founder</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="team-card" data-animation="animated flipInY">
+                                            <img src="assets/images/img_5.png" alt="Paulina Gayoso" class="team-member-thumbnail">
+                                            <div class="team-member-details">
+                                                <h6 class="team-member-name">Paulina Gayoso</h6>
+                                                <p class="team-meber-title">Project Manager</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="team-card featured" data-animation="animated flipInY">
+                                            <img src="assets/images/img_4.png" alt="Edwards" class="team-member-thumbnail">
+                                            <div class="team-member-details">
+                                                <h6 class="team-member-name">Edwards</h6>
+                                                <p class="team-meber-title">CTO, Co-Founder</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="career-section hiro-section bg-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 class="section-title wow fadeInLeft">
+                        Join fix36 <br> Today!
+                    </h2>
+                </div>
+                <div class="col-md-6 wow fadeInRight">
+                    <p class="section-text-ct mb-5">Discover, connect, and elevate your service experience. Join fix36 and be part of a thriving community where services meet excellence!</p>
+                    <a href="{% url 'contact' %}" class="hiro-btn-outline"> Join now </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact-section hiro-section">
+        <div class="container wow fadeInUp">
+            <h6 class="font-weight-semibold mb-4 mb-md-0">At fix36, it’s always storytelling time. Swing by & share yours.</h6>
+            <h2 class="section-title">Let’s talk</h2>
+            <div class="contact-address">
+                <div class="row">
+                    <div class="col-md-5">
+                        <p class="font-weight-medium">Buhari Shopping Complex, <br> Hadejia Road, <br> Kano, NG</p>
+                    </div>
+                    <div class="col-md-5 mb-4 mb-md-0">
+                        <p class="font-weight-medium">NG: +23480 6446 6020 <br> hi@fix36.com</p>
+                        <ul class="nav contact-social-links">
+                            <li class="nav-item">
+                                <a href="#!" class="nav-link">
+                                    <img src="{% static '/main/assets/images/twitter@1x.svg' %}" alt="twitter">
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#!" class="nav-link">
+                                    <img src="{% static '/main/assets/images/linkedin@1x.svg' %}" alt="linkedin">
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#!" class="nav-link">
+                                    <img src="{% static '/main/assets/images/facebook@1x.svg' %}" alt="facebook">
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#!" class="nav-link">
+                                    <img src="{% static '/main/assets/images/behance@1x.svg' %}" alt="behance">
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#!" class="nav-link">
+                                    <img src="{% static '/main/assets/images/medium@1x.svg' %}" alt="medium">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2 d-flex align-items-end">
+                        <a href="#top" class="go-top-btn">
+                            <img src="{% static '/main/assets/images/arrow_up@1x.svg' %}" alt="arrow up">
+                            <span class="sr-only">Go to top</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

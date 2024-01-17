@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FIX36</title>
+    <link rel="shortcut icon" href="{% static '/main/assets/images/log.png' %}"" type="image/x-icon">
+    <link rel="stylesheet" href="{% static '/main/assets/vendors/animate.css/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static '/main/assets/css/style.css' %}">
+    <script src="{% static '/main/assets/vendors/jquery/jquery.min.js' %}"></script>
+    <script src="{% static '/main/assets/js/loader.js' %}"></script>
+</head>
+
+<body>
+    <div class="hiro-loader"></div>
+    {% block body %}
+    {% endblock %}
+    <footer class="hiro-footer wow fadeInUp">
+        <div class="container d-flex flex-wrap justify-content-lg-between align-items-center">
+            <p class="mb-0 footer-text">© <a href="#" target="_blank" rel="noopener noreferrer" class="text-reset">SANDSHADE LTD</a> 2024. All rights reserved.</p>
+            <nav class="footer-nav nav">
+                <a href="#!" class="nav-link">Terms and Conditions</a>
+                <a href="#!" class="nav-link">Privacy Policy</a>
+                <a href="#!" class="nav-link">Cookie Policy</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="{% static '/main/assets/vendors/wowjs/wow.min.js' %}"></script>
+    <script src="{% static '/main/assets/vendors/popper.js/popper.min.js' %}"></script>
+    <script src="{% static '/main/assets/vendors/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+    <script src="{% static '/main/assets/js/main.js' %}"></script>
+    <script>
+        new WOW().init();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+
+{% block body %}
+    <header class="hiro-header" id="top">
+        <nav>
+            <div class="container">
+                <div class="hiro-nav">
+                    <a href="{% url 'index' %}" class="nav-brand">
+                        <img src="{% static '/main/assets/images/logo.png' %}" height="30" width="88" alt="fix36" class="logo">
+                        <img src="{% static '/main/assets/images/logo-white.png' %}" height="40" width="98" alt="fix36" class="logo-white">
+                    </a>
+                    <button class="hiro-nav-popup-toggle">
+                        <svg width="20px" height="18px" viewBox="0 0 20 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g id="Hiro" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g id="hiro-agency" transform="translate(-964.000000, -37.000000)" fill="#FFFFFF">
+                                    <g id="Menu" transform="translate(964.000000, 37.000000)">
+                                        <g id="menu">
+                                            <rect id="Rectangle" fill-rule="nonzero" x="-8.05281767e-14" y="7.50795322" width="19.9609942" height="2.4951462"></rect>
+                                            <rect id="Rectangle" fill-rule="nonzero" x="-8.05281767e-14" y="14.9964327" width="19.9609942" height="2.4951462"></rect>
+                                            <rect id="Rectangle" fill-rule="nonzero" x="-8.05281767e-14" y="0.0194736842" width="19.9609942" height="2.4951462"></rect>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+     {% include 'main/partials/popup.html' %}
+
+
+    <main class="contact-page-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-4 offset-lg-2 contact-page-content-wrapper wow fadeInLeft">
+                    <div class="contact-page-content">
+                        <h4 class="contact-page-title">fix36 is coming soon</h4>
+                        <p class="contact-page-street-address">Buhari Shopping Complex, <br> Hadejia Road, <br> Kano, NG</p>
+                        <p class="mb-4">NG: +23480 6446 6020 <br> hi@fix36.com</p>
+                        <ul class="nav contact-social-links">
+                            <li class="nav-item">
+                                <a href="#!" class="nav-link">
+                                    <img src="{% static '/main/assets/images/twitter@1x.svg' %}" alt="twitter">
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#!" class="nav-link">
+                                    <img src="{% static '/main/assets/images/linkedin@1x.svg' %}" alt="linkedin">
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#!" class="nav-link">
+                                    <img src="{% static '/main/assets/images/facebook@1x.svg' %}" alt="facebook">
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#!" class="nav-link">
+                                    <img src="{% static '/main/assets/images/behance@1x.svg' %}" alt="behance">
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#!" class="nav-link">
+                                    <img src="{% static '/main/assets/images/medium@1x.svg' %}" alt="medium">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>       
+                </div>
+
+                <div class="col-md-6 col-lg-4 contact-page-form-wrapper wow fadeInRight">
+                    <form action="{% url 'contact' %}" method="post">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="name" class="sr-only">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="name" class="sr-only">Phone</label>
+                            <input type="text" class="form-control" id="name" name="phone" placeholder="Phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="sr-only">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="sr-only">Customer</label>
+                            <select id="" name="customer_type" class="form-control" id="message">
+                                <option value="1">End Customer</option>
+                                <option value="2">Service Provider</option>
+                                <option value="3">Both</option>
+                            </select>
+                        </div>
+                        <div>
+                            <button class="btn" type="Submit">Join the wait list</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}
